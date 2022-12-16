@@ -23,12 +23,12 @@
           <a href="index.html" class="logo"
             >Web<span class="logo-studio-black">Studio</span></a
           >
-          <!--nav to częśc strony która ma odnośniki do nawigacji po naszej stronie-->
-
           <nav class="navigate">
             <ul>
-              <li><a href="#">Agencja</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="#" class="navigate-agency">Agencja</a></li>
+              <li>
+                <a href="portfolio.html">Portfolio</a>
+              </li>
               <li><a href="#">Kontakt</a></li>
             </ul>
           </nav>
@@ -57,7 +57,9 @@
         <div class="container">
           <!--Header-->
           <h1>EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button type="button" class="slogan-btn">Zamów usługe</button>
+          <button type="button" class="slogan-btn" data-modal-open>
+            Zamów usługe
+          </button>
         </div>
       </section>
 
@@ -388,5 +390,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" data-modal-close>&times;</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
