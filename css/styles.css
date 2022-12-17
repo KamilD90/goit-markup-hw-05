@@ -186,26 +186,32 @@ body {
 }
 .backdrop {
   position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  display: grid;
+  place-items: center;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
+  /* top: 50%;
+  left: 50%; */
   width: 528px;
-  min-height: 581px;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  height: 581px;
+  transform: translateY(0);
+  background-color: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
 .backdrop:not(.is-hidden) .modal {
+  animation-name: puff-in-center;
+  animation-duration: 1500ms;
+  animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+  animation-direction: both;
+}
+
+.backdrop.is-hidden {
   animation-name: puff-in-center;
   animation-duration: 1500ms;
   animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -244,6 +250,9 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.is-hidden .modal {
+  transform: translateY(-150%);
 }
 /*   ARTICLE PART */
 
@@ -642,14 +651,33 @@ body {
   justify-content: space-around;
 }
 
-.category figure {
+/* .category-card {
   margin-bottom: 30px;
+  width: 370px;
+  height: 404px;
+  overflow: hidden;
+  position: relative;
+} */
+
+/* .category-card {
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 294px;
+  transform: translateY(294px;);
+  transition: transform 250ms ease;
 }
 
-.category figure:hover,
-.category figure:focus {
+.category-card:hover {
+} */
+
+.category-card:hover,
+.category-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transform: translateY(0);
 }
 
 .category figcaption {
