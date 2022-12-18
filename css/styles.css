@@ -305,18 +305,19 @@ body {
   place-items: center;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  z-index: 2;
+  transform: translateY(170%);
+  transition: transform 750ms cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 .modal {
   position: relative;
-  z-index: 2;
   width: 528px;
   height: 581px;
   transform: translateY(0);
@@ -329,11 +330,6 @@ body {
 
 .is-hidden .modal {
   transform: translateY(-170%);
-  transition: transform 750ms cubic-bezier(0.47, 0, 0.745, 0.715);
-}
-.backdrop:not(.is-hidden) .modal {
-  /* transform: translateY(0);
-  transition: transform 750ms cubic-bezier(0.47, 0, 0.745, 0.715); */
 }
 
 .close-btn {
@@ -347,6 +343,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+/* MODAL ENDS HERE !!!  */
 
 /*   ARTICLE PART */
 
