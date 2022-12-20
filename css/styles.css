@@ -531,9 +531,6 @@ body {
 }
 
 /* ------------------------FOOTER PART----------------------- */
-.footer {
-  background-color: var(--section-background);
-}
 
 .footer .container {
   display: flex;
