@@ -199,7 +199,6 @@ body {
 .navigate a:focus,
 .navigate a:hover {
   color: var(--text-alt);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigate .nav-agency-active {
@@ -241,7 +240,6 @@ body {
 .nav-contact:hover::after,
 .nav-contact:focus::after {
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact {
@@ -270,7 +268,6 @@ body {
 .contact a:focus,
 .contact a:hover {
   color: var(--text-alt);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---------------------MAIN section  WEB STUDIO-------------------- */
@@ -323,7 +320,6 @@ body {
 .slogan-btn:hover {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*  ------------------- ARTICLE PART------------------- */
@@ -458,10 +454,6 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-sm-icon {
-  fill: var(--light-grey);
-}
-
 .team-sm a {
   display: flex;
   align-items: center;
@@ -469,8 +461,9 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--light-grey);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-sm-circle:hover > .team-sm-icon,
@@ -481,8 +474,8 @@ body {
 
 .team-sm-circle:hover,
 .team-sm-circle:focus {
+  fill: var(--white);
   background-color: var(--text-alt);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-sm {
@@ -515,24 +508,17 @@ body {
   border-radius: 4px;
   fill: var(--light-grey);
   border: 1px solid var(--light-grey);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.our-customers-logo a:hover,
-.our-customers-logo a:focus {
+.customer-logo-link:hover,
+.customer-logo-link:focus .our-customers-logo a:hover > svg,
+.our-customers-logo a:focus > svg {
   border-color: var(--text-alt);
   outline: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.our-customers-logo a:hover > svg,
-.our-customers-logo a:focus > svg {
   fill: var(--text-alt);
-  outline: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 /* ------------------------FOOTER PART----------------------- */
 .footer {
   background-color: var(--section-background);
@@ -584,7 +570,7 @@ body {
   line-height: 1.71;
   color: var(--text1);
   letter-spacing: 0.03em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-tel {
@@ -593,7 +579,7 @@ body {
   line-height: 1.71;
   color: var(--text1);
   letter-spacing: 0.03em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-mail:focus,
@@ -602,7 +588,6 @@ body {
 .contact-tel:hover {
   cursor: pointer;
   color: var(--text-alt);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-join {
@@ -637,22 +622,13 @@ body {
   justify-content: center;
   width: 44px;
   height: 44px;
+  fill: var(--white);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-join-icons svg {
-  fill: var(--white);
-}
-
-.footer-sm-circle:hover > .footer-sm-icon,
-.footer-sm-circle:focus > .footer-sm-icon {
-  fill: var(--white);
 }
 
 .footer-sm-circle:hover,
 .footer-sm-circle:focus {
   background-color: var(--text-alt);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------------PORTFOLIO STARTS HERE -------------------*/
@@ -676,7 +652,6 @@ body {
 .nav-agency:hover::after,
 .nav-agency:focus::after {
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigate .portfolio-is-active {
@@ -733,10 +708,6 @@ body {
   background-color: var(--text-alt);
   color: var(--white);
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -788,7 +759,6 @@ body {
 
 .category-card:hover,
 .category-card:focus {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   outline: none;
@@ -797,7 +767,6 @@ body {
 .category-card:hover .overlay,
 .category-card:focus .overlay {
   transform: translateY(-100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .category-item {
@@ -840,8 +809,6 @@ body {
 .contact-mail-portfolio:focus {
   color: var(--text-alt);
   text-decoration-color: var(--text-alt);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    text-decoration-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------MODAL BOX------------------ */
@@ -863,7 +830,6 @@ body {
 
 .modal {
   display: flex;
-  opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 528px;
   height: 581px;
