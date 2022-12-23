@@ -236,9 +236,10 @@ body {
   border-radius: 2px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .nav-portfolio:hover::after,
-.nav-contact:hover::after {
+.nav-portfolio:focus::after,
+.nav-contact:hover::after,
+.nav-contact:focus::after {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -672,7 +673,8 @@ body {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-agency:hover::after {
+.nav-agency:hover::after,
+.nav-agency:focus::after {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -722,8 +724,8 @@ body {
   outline: none;
   padding: 6px 22px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters button:hover,
@@ -732,8 +734,8 @@ body {
   color: var(--white);
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -781,7 +783,6 @@ body {
   text-align: left;
   width: 100%;
   height: 100%;
-  transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
